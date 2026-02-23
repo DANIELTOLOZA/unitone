@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ redes y web · unidad I</title>
+    <!-- Font Awesome icons (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS externo (suave y moderno) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER · burbuja suave -->
+<header class="topo">
+    <div class="topo-contenido">
+        <h1><span class="iconito">🌀</span> unidad I · generalidades</h1>
+        <p class="byline">
+            <i class="fas fa-feather-alt"></i> Mg. Carlos René Angarita Sanguino
+            <span class="puntito">•</span> diseño web · VII semestre
+        </p>
+        <div class="header-glow"></div>
+    </div>
+</header>
+
+<!-- NAV · píldoras flotantes -->
+<nav class="nav-pastel">
+    <a href="#" data-page="inicio" class="nav-link activo"><i class="fas fa-home"></i> inicio</a>
+    <a href="#" data-page="internet" class="nav-link"><i class="fas fa-cloud-sun"></i> internet</a>
+    <a href="#" data-page="modelos" class="nav-link"><i class="fas fa-layer-group"></i> osi / tcp</a>
+    <a href="#" data-page="protocolos" class="nav-link"><i class="fas fa-code-branch"></i> protocolos</a>
+    <a href="#" data-page="ip" class="nav-link"><i class="fas fa-map-pin"></i> direcciones ip</a>
+    <a href="#" data-page="web" class="nav-link"><i class="fas fa-compass"></i> cliente/servidor</a>
+    <a href="#" data-page="org" class="nav-link"><i class="fas fa-globe"></i> organismos</a>
+    <a href="#" data-page="contacto" class="nav-link"><i class="fas fa-paper-plane"></i> contacto</a>
+</nav>
+
+<!-- CONTENEDOR PRINCIPAL (cada página es una burbuja) -->
+<main id="contenedor-paginas">
+
+    <!-- PÁGINA INICIO -->
+    <section id="page-inicio" class="page visible">
+        <div class="card">
+            <h2><i class="fas fa-palette"></i> ¡hola, red!</h2>
+            <p class="lead">Un paseo suave por los fundamentos de internet, las arquitecturas web y los pequeños inventos que conectan el mundo. Todo está guardado en tarjetas de colores.</p>
+            <div class="mini-destacado">
+                <span class="emoji-big">🌐</span>
+                <p><strong>internet</strong> · red descentralizada que habla TCP/IP</p>
+            </div>
+            <div class="imagen-placeholder"><i class="fas fa-chart-line"></i> [1961 → 2006: millones de navegantes]</div>
+            <div class="pie-card">
+                <span><i class="far fa-calendar-alt"></i> 1983: arpanet se pasa a TCP/IP</span>
+                <button class="btn-smooth" onclick="navegarA('internet')">seguir la historia <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA INTERNET · hitos -->
+    <section id="page-internet" class="page">
+        <div class="card">
+            <h2><i class="fas fa-tree"></i> internet · hitos tiernos</h2>
+            <div class="flex-hitos">
+                <ul class="lista-hitos">
+                    <li><span class="chicle">1961</span> leonard kleinrock · conmutación de paquetes (MIT)</li>
+                    <li><span class="chicle">1983</span> arpanet adopta TCP/IP (adiós NCP)</li>
+                    <li><span class="chicle">1984</span> nace el término internet</li>
+                    <li><span class="chicle">1989</span> www · la web comienza</li>
+                    <li><span class="chicle">2006</span> 1.100 millones de usuarios</li>
+                    <li><span class="chicle">2016</span> proyección: 2.000 millones</li>
+                </ul>
+                <div class="caja-imagen">
+                    <div class="imagen-placeholder"><i class="fas fa-plug"></i> primera conexión: 3 universidades california + utah</div>
+                    <p class="textito"><i class="fas fa-seedling"></i> internet crece como una enredadera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA MODELOS OSI / TCP-IP -->
+    <section id="page-modelos" class="page">
+        <div class="card">
+            <h2><i class="fas fa-cubes"></i> modelos OSI y TCP/IP</h2>
+            <div class="modelos-wrapper">
+                <div class="capa-modelo">
+                    <h3>OSI · 7 capas</h3>
+                    <div class="capas-pastel">
+                        <div class="capa"><span>aplicación (7)</span> <i class="fas fa-cloud"></i></div>
+                        <div class="capa"><span>presentación (6)</span> <i class="fas fa-code"></i></div>
+                        <div class="capa"><span>sesión (5)</span> <i class="fas fa-handshake"></i></div>
+                        <div class="capa"><span>transporte (4)</span> <i class="fas fa-exchange-alt"></i></div>
+                        <div class="capa"><span>red (3)</span> <i class="fas fa-route"></i></div>
+                        <div class="capa"><span>enlace (2)</span> <i class="fas fa-link"></i></div>
+                        <div class="capa"><span>física (1)</span> <i class="fas fa-wave-square"></i></div>
+                    </div>
+                </div>
+                <div class="capa-modelo">
+                    <h3>TCP/IP · DoD</h3>
+                    <ul class="lista-tcp">
+                        <li><i class="fas fa-arrow-up"></i> aplicación · http, smtp...</li>
+                        <li><i class="fas fa-arrow-up"></i> transporte · segmentos</li>
+                        <li><i class="fas fa-arrow-up"></i> internet · paquetes</li>
+                        <li><i class="fas fa-arrow-up"></i> acceso red · tramas, bits</li>
+                    </ul>
+                    <p class="nota"><i class="fas fa-dove"></i> darpa 1970 · protocolo = reglas + sintaxis + sincronización</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA PROTOCOLOS Y PUERTOS -->
+    <section id="page-protocolos" class="page">
+        <div class="card">
+            <h2><i class="fas fa-door-open"></i> protocolos · puertos</h2>
+            <p class="servicios-destacados"><i class="fas fa-star"></i> http · email · ftp · p2p · irc · voip · iptv · ssh · telnet · cloud</p>
+            <div class="nube-protocolos">
+                <span>🔹 http:80</span> <span>🔹 https:443</span> <span>🔹 ftp:21/20</span> <span>🔹 ssh:22</span>
+                <span>🔹 telnet:23</span> <span>🔹 smtp:25</span> <span>🔹 pop3:110</span> <span>🔹 imap4:143</span>
+                <span>🔹 dns:53</span> <span>🔹 nntp:119</span> <span>🔹 ntp:123</span> <span>🔹 snmp:161</span>
+                <span>🔹 irc:194</span>
+            </div>
+            <h3 class="subtitular">números de puerto (16 bits)</h3>
+            <div class="rango-puertos">
+                <span class="chip">1–1024 · well known</span>
+                <span class="chip">1024–49151 · registrados</span>
+                <span class="chip">49152–65535 · efímeros</span>
+            </div>
+            <p class="notita">ejemplo · 1.2.3.4:80 (tcp) → http</p>
+            <div class="listado-puertos">
+                <i class="fas fa-list-ul"></i> 21 ftp · 22 ssh · 23 telnet · 25 smtp · 53 dns · 80 http · 110 pop3 · 119 nntp · 123 ntp · 143 imap · 161 snmp · 194 irc · 443 https
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA DIRECCIÓN IP -->
+    <section id="page-ip" class="page">
+        <div class="card">
+            <h2><i class="fas fa-location-dot"></i> direcciones ip · clases</h2>
+            <div class="ip-flex">
+                <div>
+                    <p><strong>ipv4 · 32 bits</strong> (decimal con puntos)</p>
+                    <ul class="lista-clases">
+                        <li>clase A · 1.0.0.0 – 126.255.255.255</li>
+                        <li>clase B · 128.0.0.0 – 191.255.255.255</li>
+                        <li>clase C · 192.0.0.0 – 223.255.255.255</li>
+                        <li>clase D (multicast) · E (investigación)</li>
+                    </ul>
+                </div>
+                <div class="imagen-placeholder"><i class="fas fa-diagram-project"></i> [infografía suave de una ip]</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA WWW · CLIENTE/SERVIDOR · 3 CAPAS -->
+    <section id="page-web" class="page">
+        <div class="card">
+            <h2><i class="fas fa-cloud-sun-rain"></i> web · cliente, servidor, capas</h2>
+            <div class="burbuja-solicitud"><i class="fas fa-arrow-down"></i> navegador → servidor http (puerto 80) <i class="fas fa-arrow-up"></i></div>
+            <div class="cliente-servidor">
+                <div class="mini-card"><i class="fas fa-laptop-house"></i> <strong>cliente</strong> · navegador (firefox, chrome) · pide páginas</div>
+                <div class="mini-card"><i class="fas fa-server"></i> <strong>servidor</strong> · apache, iis · responde + archivos</div>
+            </div>
+            <h3>arquitectura tres capas</h3>
+            <div class="capas-arquitectura">
+                <div class="capa-arq"><i class="fas fa-paint-brush"></i> presentación · interfaz</div>
+                <div class="capa-arq"><i class="fas fa-cogs"></i> lógica · negocio</div>
+                <div class="capa-arq"><i class="fas fa-database"></i> datos · almacenamiento</div>
+            </div>
+            <p class="mime"><i class="fas fa-paperclip"></i> MIME · multimedia entre sistemas</p>
+            <div class="pie-card"><i class="fas fa-crown"></i> pro·media 2.0 developer</div>
+        </div>
+    </section>
+
+    <!-- PÁGINA ORGANISMOS -->
+    <section id="page-org" class="page">
+        <div class="card">
+            <h2><i class="fas fa-hand-holding-heart"></i> gobernanza de internet</h2>
+            <div class="org-grid">
+                <div class="org-item"><i class="fas fa-globe"></i> internet society · liderazgo</div>
+                <div class="org-item"><i class="fas fa-wrench"></i> ietf · rfcs, estándares</div>
+                <div class="org-item"><i class="fas fa-sitemap"></i> iab · arquitectura</div>
+                <div class="org-item"><i class="fas fa-id-card"></i> icann · dominios, ip, puertos</div>
+                <div class="org-item"><i class="fab fa-css3-alt"></i> w3c · html, css, wai</div>
+            </div>
+            <div class="imagen-placeholder"><i class="fas fa-file-alt"></i> http/1.1 (rfc 2616) · tim berners-lee · w3c</div>
+        </div>
+    </section>
+
+    <!-- PÁGINA CONTACTO / GRACIAS -->
+    <section id="page-contacto" class="page">
+        <div class="card contacto">
+            <i class="fas fa-heart" style="font-size: 4rem; color: #f28b82;"></i>
+            <h2 class="gracias">gracias</h2>
+            <p class="email"><i class="fas fa-envelope"></i> carlosreneas@ufps.edu.co</p>
+            <p class="web"><i class="fab fa-google"></i> sites.google.com/site/carlosangaritas</p>
+            <div class="horario"><i class="fas fa-clock"></i> asesoría · lunes 8–9 · viernes 8–10</div>
+            <div class="imagen-placeholder">Mg. Carlos René Angarita · 2025</div>
+        </div>
+    </section>
+</main>
+
+<footer class="pie-global">
+    <i class="far fa-smile"></i> contenido original · diseño de aplicaciones web · semestre vii
+</footer>
+
+<!-- script mínimo para navegación -->
+<script>
+    const enlaces = document.querySelectorAll('.nav-link');
+    const paginas = document.querySelectorAll('.page');
+
+    function ocultarTodas() {
+        paginas.forEach(p => p.classList.remove('visible'));
+        enlaces.forEach(e => e.classList.remove('activo'));
+    }
+
+    function mostrarPagina(id) {
+        ocultarTodas();
+        const pagina = document.getElementById('page-' + id);
+        if (pagina) pagina.classList.add('visible');
+        const activo = Array.from(enlaces).find(a => a.dataset.page === id);
+        if (activo) activo.classList.add('activo');
+    }
+
+    enlaces.forEach(enlace => {
+        enlace.addEventListener('click', (e) => {
+            e.preventDefault();
+            const pageId = enlace.dataset.page;
+            if (pageId) mostrarPagina(pageId);
+        });
+    });
+
+    window.navegarA = function(page) {
+        mostrarPagina(page);
+    };
+
+    if (!document.querySelector('.page.visible')) {
+        mostrarPagina('inicio');
+    }
+</script>
+</body>
+</html>
